@@ -13,11 +13,7 @@ let userSchema = new mongoose.Schema({
 		required: true,
 		unique: true,
 		minlength: 5,
-		validate: {
-			validator: (input) => {
-				return /.*@?*\..*/test(input)
-			}
-		}
+		maxlength: 32
 	},
 	password: {
 		type: String,
